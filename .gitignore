@@ -3,3 +3,4 @@ __pycache__
 *.pyc
 .DS.Store
 node_modules
+venv
