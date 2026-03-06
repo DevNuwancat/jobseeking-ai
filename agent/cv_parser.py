@@ -90,6 +90,9 @@ def save_cv_to_superbase(user_id:str, cv_file_url:str, cv_data:dict) -> None:
     """
     Save extracted CV data to Supabase cv_profile table
     """
+
+    print("Language extracted from CV", cv_data['languages'])
+
     supabase.table("cv_profiles").insert({
         "user_id":user_id,
         "cv_files_url":cv_file_url,
@@ -97,7 +100,7 @@ def save_cv_to_superbase(user_id:str, cv_file_url:str, cv_data:dict) -> None:
         "experience_years":cv_data['experience_years'],
         "current_title":cv_data['current_title'],
         "education":cv_data['education'],
-        "language":cv_data['languages'],
+        "language":cv_data['languages'] or ['English'],
         "summary":cv_data['summary']
     }).execute()
 
@@ -114,6 +117,8 @@ if __name__ == "__main__":
 
     # convert string to Python dictionary
     data = json.loads(clean)
+
+    
 
     save_cv_to_superbase(
         user_id="107275a8-0fe5-4c3c-bf92-78a17fef7bf6",
