@@ -4,3 +4,5 @@ __pycache__
 .DS.Store
 node_modules
 venv
+sample.pdf
+CLAUDE.md
