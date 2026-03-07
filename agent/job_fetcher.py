@@ -10,7 +10,7 @@ import os
 # Load env. to envirament 
 load_dotenv()
 
-def fetch_jobs(quary:str, location:str, num_result:int=10) -> list:
+def fetch_jobs(query:str, location:str, num_result:int=10) -> list:
     """
     Request to Jsearch api
     retutn job list JSON
@@ -23,7 +23,7 @@ def fetch_jobs(quary:str, location:str, num_result:int=10) -> list:
     }
 
     params = {
-        "query" : f"{quary} in {location}",
+        "query" : f"{query} in {location}",
         "page"  : 1,
         "country":"sri lanka",
         "date_posted":"all"

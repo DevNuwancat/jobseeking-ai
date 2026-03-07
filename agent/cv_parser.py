@@ -117,11 +117,9 @@ if __name__ == "__main__":
 
     # convert string to Python dictionary
     data = json.loads(clean)
-
     
-
     save_cv_to_superbase(
-        user_id="107275a8-0fe5-4c3c-bf92-78a17fef7bf6",
+        user_id="4b8ffe92-d4f1-4d92-9e2b-120e66979a0d",
         cv_file_url="sample.pdf",
         cv_data=data,
     )

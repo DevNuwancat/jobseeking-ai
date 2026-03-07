@@ -48,6 +48,7 @@ def score_job(cv_data:dict, job:dict) -> dict :
     return json.loads(clean_response_data)
 
 if __name__ == "__main__":
+    """
     # test cv data
     test_cv = {
         "skills": ["Python", "FastAPI", "SQL"],
@@ -65,6 +66,7 @@ if __name__ == "__main__":
 
     result = score_job(test_cv, test_job)
 
+    
     print(f"Match Score:{result['match_score']}%")
     print(f"Reason:{result['match_reason']}")
 
@@ -73,6 +75,6 @@ if __name__ == "__main__":
         if (len(result['missing_skills'])) != 0:
             print("Missing Skills:")
             print(missing_skills) 
-
+    """
 
 
